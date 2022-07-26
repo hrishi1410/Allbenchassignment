@@ -1,0 +1,212 @@
+Microsoft Windows [Version 10.0.22000.675]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\mongodb-windows-5.0.9\bin>mongo
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("924fc0eb-856c-4bcf-8355-bf2bfde6d5cf") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-06-14T18:41:41.769+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2022-06-14T18:41:41.769+05:30: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs;
+admin             0.000GB
+config            0.000GB
+local             0.000GB
+mongodb_practice  0.000GB
+> show dbs;
+admin             0.000GB
+config            0.000GB
+local             0.000GB
+mongodb_practice  0.000GB
+> show dbs;
+admin             0.000GB
+config            0.000GB
+local             0.000GB
+mongodb_practice  0.000GB
+population        0.002GB
+> use population;
+switched to db population
+> db.zipcodes.find({$and:[{city:"ATLANTA"},{state:"GA"}]});
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30329", "city" : "ATLANTA", "loc" : [ -84.321402, 33.823555 ], "pop" : 17013, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30330", "city" : "ATLANTA", "loc" : [ -84.434735, 33.70645 ], "pop" : 643, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+Type "it" for more
+> db.zipcodes.aggregate([{$match:{city:"ATLANTA",state:"GA"}}]);
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30329", "city" : "ATLANTA", "loc" : [ -84.321402, 33.823555 ], "pop" : 17013, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30330", "city" : "ATLANTA", "loc" : [ -84.434735, 33.70645 ], "pop" : 643, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+Type "it" for more
+> db.zipcodes.aggregate([{$group:{_id:"$state",Totalpopulation:{$sum:"$pop"}}}]);
+{ "_id" : "CA", "Totalpopulation" : 29754890 }
+{ "_id" : "HI", "Totalpopulation" : 1108229 }
+{ "_id" : "MS", "Totalpopulation" : 2573216 }
+{ "_id" : "WV", "Totalpopulation" : 1793146 }
+{ "_id" : "WI", "Totalpopulation" : 4891769 }
+{ "_id" : "TX", "Totalpopulation" : 16984601 }
+{ "_id" : "OR", "Totalpopulation" : 2842321 }
+{ "_id" : "MA", "Totalpopulation" : 6016425 }
+{ "_id" : "TN", "Totalpopulation" : 4876457 }
+{ "_id" : "DE", "Totalpopulation" : 666168 }
+{ "_id" : "SC", "Totalpopulation" : 3486703 }
+{ "_id" : "OH", "Totalpopulation" : 10846517 }
+{ "_id" : "DC", "Totalpopulation" : 606900 }
+{ "_id" : "ID", "Totalpopulation" : 1006749 }
+{ "_id" : "MI", "Totalpopulation" : 9295297 }
+{ "_id" : "UT", "Totalpopulation" : 1722850 }
+{ "_id" : "MO", "Totalpopulation" : 5110648 }
+{ "_id" : "WA", "Totalpopulation" : 4866692 }
+{ "_id" : "NV", "Totalpopulation" : 1201833 }
+{ "_id" : "KY", "Totalpopulation" : 3675484 }
+Type "it" for more
+> db.zipcodes.aggregate([{$group:{_id:"$state",Totalpopulation:{$sum:"$pop"}}},{$sort:{Totalpopulation:-1}}]);
+{ "_id" : "CA", "Totalpopulation" : 29754890 }
+{ "_id" : "NY", "Totalpopulation" : 17990402 }
+{ "_id" : "TX", "Totalpopulation" : 16984601 }
+{ "_id" : "FL", "Totalpopulation" : 12686644 }
+{ "_id" : "PA", "Totalpopulation" : 11881643 }
+{ "_id" : "IL", "Totalpopulation" : 11427576 }
+{ "_id" : "OH", "Totalpopulation" : 10846517 }
+{ "_id" : "MI", "Totalpopulation" : 9295297 }
+{ "_id" : "NJ", "Totalpopulation" : 7730188 }
+{ "_id" : "NC", "Totalpopulation" : 6628637 }
+{ "_id" : "GA", "Totalpopulation" : 6478216 }
+{ "_id" : "VA", "Totalpopulation" : 6181479 }
+{ "_id" : "MA", "Totalpopulation" : 6016425 }
+{ "_id" : "IN", "Totalpopulation" : 5544136 }
+{ "_id" : "MO", "Totalpopulation" : 5110648 }
+{ "_id" : "WI", "Totalpopulation" : 4891769 }
+{ "_id" : "TN", "Totalpopulation" : 4876457 }
+{ "_id" : "WA", "Totalpopulation" : 4866692 }
+{ "_id" : "MD", "Totalpopulation" : 4781379 }
+{ "_id" : "MN", "Totalpopulation" : 4372982 }
+Type "it" for more
+> db.zipcodes.aggregate([{$group:{_id:"$state",Totalpopulation:{$sum:"$pop"}}},{$sort:{Totalpopulation:-1}},{$limit:3}]);
+{ "_id" : "CA", "Totalpopulation" : 29754890 }
+{ "_id" : "NY", "Totalpopulation" : 17990402 }
+{ "_id" : "TX", "Totalpopulation" : 16984601 }
+> db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},population:{$sum:"$pop"}}},{$sort:{"population":-1}},{$limit:3}]);
+{ "_id" : { "city" : "CHICAGO", "state" : "IL" }, "population" : 2452177 }
+{ "_id" : { "city" : "BROOKLYN", "state" : "NY" }, "population" : 2300504 }
+{ "_id" : { "city" : "LOS ANGELES", "state" : "CA" }, "population" : 2102295 }
+> db.zipcodes.aggregate([{$group:{_id:"$city",AvgPopulation:{$avg:"$pop"}}}]);
+{ "_id" : "FOREST KNOLLS", "AvgPopulation" : 732 }
+{ "_id" : "HANOVER", "AvgPopulation" : 7025.333333333333 }
+{ "_id" : "BOGGS", "AvgPopulation" : 544 }
+{ "_id" : "MOUNT HOREB", "AvgPopulation" : 7193 }
+{ "_id" : "RURAL RETREAT", "AvgPopulation" : 4350 }
+{ "_id" : "JARALES", "AvgPopulation" : 9 }
+{ "_id" : "BASCOM", "AvgPopulation" : 1011 }
+{ "_id" : "SARLES", "AvgPopulation" : 172 }
+{ "_id" : "WALBRIDGE", "AvgPopulation" : 4597 }
+{ "_id" : "WHITE MARSH", "AvgPopulation" : 2521 }
+{ "_id" : "NICHOLASVILLE", "AvgPopulation" : 22920 }
+{ "_id" : "GRANT PARK", "AvgPopulation" : 3009 }
+{ "_id" : "TWIN VALLEY", "AvgPopulation" : 2108 }
+{ "_id" : "PRINCEVILLE", "AvgPopulation" : 3920.5 }
+{ "_id" : "SAINT ELMO", "AvgPopulation" : 2091 }
+{ "_id" : "ALLENTOWN", "AvgPopulation" : 23952.333333333332 }
+{ "_id" : "BLACK", "AvgPopulation" : 1880.6666666666667 }
+{ "_id" : "NEENAH", "AvgPopulation" : 34261 }
+{ "_id" : "NEW ALBANY", "AvgPopulation" : 12872 }
+{ "_id" : "REMUS", "AvgPopulation" : 4990 }
+Type "it" for more
+>  db.zipcodes.aggregate([{$group:{_id:"$city",AvgPopulation:{$vag:"$pop"}}},{$sort:{AvgPopulation:-1}},{$limit:3}]);
+uncaught exception: Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "unknown group operator '$vag'",
+        "code" : 15952,
+        "codeName" : "Location15952"
+} with original command request: {
+        "aggregate" : "zipcodes",
+        "pipeline" : [
+                {
+                        "$group" : {
+                                "_id" : "$city",
+                                "AvgPopulation" : {
+                                        "$vag" : "$pop"
+                                }
+                        }
+                },
+                {
+                        "$sort" : {
+                                "AvgPopulation" : -1
+                        }
+                },
+                {
+                        "$limit" : 3
+                }
+        ],
+        "cursor" : {
+
+        },
+        "lsid" : {
+                "id" : UUID("924fc0eb-856c-4bcf-8355-bf2bfde6d5cf")
+        }
+} on connection: connection to 127.0.0.1:27017 : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:737:17
+assert.commandWorked@src/mongo/shell/assert.js:829:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:281:5
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1058:12
+@(shell):1:1
+> db.zipcodes.aggregate([{$group:{_id:"$city",AvgPopulation:{$avg:"$pop"}}},{$sort:{AvgPopulation:-1}},{$limit:3}]);
+{ "_id" : "BELL GARDENS", "AvgPopulation" : 99568 }
+{ "_id" : "ARLETA", "AvgPopulation" : 88114 }
+{ "_id" : "SOUTH GATE", "AvgPopulation" : 87026 }
+>

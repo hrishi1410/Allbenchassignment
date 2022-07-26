@@ -1,0 +1,154 @@
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop (main)
+$ mkdir Assignments
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop (main)
+$ cd Assignments
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ touch README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git init
+Initialized empty Git repository in C:/Users/mypc/Desktop/Assignments/.git/
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git add .
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.txt
+
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git commit -m 'Readme'
+[main (root-commit) 9b39cd9] Readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git branch html-assignments
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout -b html-assignments
+fatal: a branch named 'html-assignments' already exists
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m 'html-assignments'
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m 'html assignments
+> ^C
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m 'html assignments'
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git checkout main
+Switched to branch 'main'
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout main
+Already on 'main'
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git commit -m 'html assignments'
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+M       README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git add first.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m 'first commit'
+[html-assignments 1178f33] first commit
+ 1 file changed, 45 insertions(+)
+ create mode 100644 first.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git checkout main
+Switched to branch 'main'
+M       README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git merge html-assignments
+Updating 9b39cd9..1178f33
+Fast-forward
+ first.html | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 45 insertions(+)
+ create mode 100644 first.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 1178f33).
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$
+

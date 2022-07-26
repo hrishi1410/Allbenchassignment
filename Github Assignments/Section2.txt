@@ -1,0 +1,42 @@
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git add .
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git commit -m 'first'
+[main b13d743] first
+ 1 file changed, 33 insertions(+)
+ create mode 100644 third.js
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 656 bytes | 656.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PRAMBHAU/freshersbatch-june8.git
+   0ff1b23..b13d743  main -> main
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git add .
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git commit -m 'second'
+[main 0b0845e] second
+ 1 file changed, 13 insertions(+)
+ create mode 100644 Second.css
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 470 bytes | 52.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PRAMBHAU/freshersbatch-june8.git
+   b13d743..0b0845e  main -> main
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$
