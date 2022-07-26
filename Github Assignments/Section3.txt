@@ -1,0 +1,139 @@
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git branch js-assignments
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+M       README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m 'js-assignments'
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add .
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m 'js-assignments'
+[js-assignments af4e4e7] js-assignments
+ 2 files changed, 34 insertions(+)
+ create mode 100644 third.js
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m 'first commit'
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m 'first commit'
+[js-assignments 178b0d4] first commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git checkout main
+Switched to branch 'main'
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git add README.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git commit -m 'second commit'
+[main 0ff1b23] second commit
+ 1 file changed, 1 insertion(+)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add .
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m 'third commit'
+[js-assignments 0e8c1e2] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git checkout main
+Switched to branch 'main'
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   third.js
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.txt
+
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git merge js-assignments
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git branch -d js-assignments
+error: The branch 'js-assignments' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D js-assignments'.
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git branch -D js-assignments
+Deleted branch js-assignments (was 0e8c1e2).
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git remote add origin https://github.com/PRAMBHAU/freshersbatch-june8.git
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git branch -M main
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$ git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 1.28 KiB | 657.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PRAMBHAU/freshersbatch-june8.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/Assignments (main|MERGING)
+$
+
+

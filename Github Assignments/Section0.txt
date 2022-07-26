@@ -1,0 +1,179 @@
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop
+$ mkdir project_dir
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop
+$ cd project_dir
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/mypc/Desktop/project_dir/.git/
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ touch index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git add index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git commit -m 'index.html'
+[main (root-commit) 3373915] index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ touch info.txt
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ touch .gitignore
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git add index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt
+
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git log
+commit 3373915b2496befb34fd7c2966111f9a6d748a67 (HEAD -> main)
+Author: PRAMBHAU <PALLAVI.RAMBHAU-HINGE@CAPGEMINI.COM>
+Date:   Fri Jun 10 14:46:25 2022 +0530
+
+    index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git log
+commit 3373915b2496befb34fd7c2966111f9a6d748a67 (HEAD -> main)
+Author: PRAMBHAU <PALLAVI.RAMBHAU-HINGE@CAPGEMINI.COM>
+Date:   Fri Jun 10 14:46:25 2022 +0530
+
+    index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt
+
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git add index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git commit -m 'my_add'
+[main 4eca6f7] my_add
+ 1 file changed, 14 insertions(+)
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git log
+commit 4eca6f70c0896d10b1033373333a97adcebb434b (HEAD -> main)
+Author: PRAMBHAU <PALLAVI.RAMBHAU-HINGE@CAPGEMINI.COM>
+Date:   Fri Jun 10 14:51:13 2022 +0530
+
+    my_add
+
+commit 3373915b2496befb34fd7c2966111f9a6d748a67
+Author: PRAMBHAU <PALLAVI.RAMBHAU-HINGE@CAPGEMINI.COM>
+Date:   Fri Jun 10 14:46:25 2022 +0530
+
+    index.html
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main)
+$ git revert 3373915b2496befb34fd7c2966111f9a6d748a67
+CONFLICT (modify/delete): index.html deleted in (empty tree) and modified in HEAD.  Version HEAD of index.html left in tree.
+error: could not revert 3373915... index.html
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+mypc@LAPTOP-R1FK7A1C MINGW64 ~/Desktop/project_dir (main|REVERTING)
+$
+
